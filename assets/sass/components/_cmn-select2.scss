@@ -1,0 +1,181 @@
+// Select 2:
+.select2-container {
+    .select2-selection {
+        background: #001318;
+        border: 0;
+        @include border-radius(0px);
+        color: $color-white;
+        font-family: $font-body;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        outline: 0;
+        padding: 0;
+        height: 56px;
+        width: 100%;
+
+        .select2-selection__rendered {
+            padding: 15px 40px 15px 15px;
+            color: $color-white;
+
+            .select2-selection__placeholder {
+                color: $color-white;
+                opacity: 0.6;
+            }
+        }
+
+        .select2-selection__arrow {
+            height: 100%;
+            width: 40px;
+            top: 0;
+            right: 0px;
+
+            b {
+                background: url("../img/icon-down-arrow.svg") no-repeat center;
+                border: 0;
+                display: block;
+                margin: 0 auto;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0px;
+                height: 100%;
+                width: 40px;
+                @include transition(0.3s);
+            }
+        }
+
+        &:hover {
+            .select2-selection__rendered {
+                color: $color-white;
+
+                .select2-selection__placeholder {
+                    color: $gray-color-9;
+                }
+            }
+        }
+    }
+
+    .select2-dropdown {
+        @include border-radius(0);
+        border: 0;
+        background: transparent;
+        z-index: 90;
+
+        .select2-search__field {
+            outline: none;
+            margin-bottom: 4px;
+            padding: 5px 10px;
+            @include border-radius(0);
+        }
+
+        .select2-results {
+            ul {
+                li {
+                    color: $color-white;
+                    font-size: 16px;
+                    line-height: 26px;
+                    padding: 10px 15px;
+                    background: none;
+                    font-family: $font-body;
+                    margin: 0;
+                    border-bottom: 1px solid #364245;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    &[aria-disabled="true"] {
+                        font-weight: 700;
+                    }
+
+                    &:before {
+                        content: normal;
+                    }
+
+                    &.select2-results__option--highlighted {
+                        color: rgba(255, 255, 255, 0.6);
+                    }
+
+                    &.select2-results__option--selected {
+                        color: rgba(255, 255, 255, 0.6);
+                    }
+
+                    &:hover {
+                        color: rgba(255, 255, 255, 0.6);
+                    }
+                }
+
+                .mCSB_inside {
+                    .mCSB_container {
+                        margin-right: 0px;
+
+                        &.mCS_y_hidden {
+                            margin-right: 0;
+                        }
+                    }
+                }
+
+                .mCSB_scrollTools {
+                    top: 6px;
+                    width: 14px;
+                    bottom: 6px;
+
+                    .mCSB_dragger_bar {
+                        background: $color-white;
+                        border-radius: 0;
+                        width: 4px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &.select2-container--disabled {
+        .select2-selection {
+            color: $color-white;
+
+            .select2-selection__arrow {
+                b {
+                    opacity: 0.2;
+                }
+            }
+        }
+    }
+    &.select2-container--open{
+        .select2-selection--single{
+            .select2-selection__arrow {
+                b{
+                    border: 0;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
+
+.select2-container--default .select2-results>.select2-results__options {
+    max-height: 240px;
+    border: 0;
+    box-shadow: none;
+    margin-top: 8px;
+    background: #001318;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background: none;
+}
+
+.mCSB_scrollTools {
+    width: 10px;
+    opacity: 1;
+
+    .mCSB_draggerRail {
+        background: transparent;
+    }
+}
+
+.mCSB_scrollTools .mCSB_draggerRail {
+    width: 6px;
+}

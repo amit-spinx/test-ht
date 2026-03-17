@@ -1,0 +1,46 @@
+{
+  "vendor": {
+    "sass": ["./node_modules/bootstrap/scss/"],
+    "js": [
+      "./node_modules/jquery/dist/jquery.min.js",
+      "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+    ],
+    "fonts": [],
+    "img": [],
+    "css": []
+  },
+  "app": {
+    "sass": "",
+    "js": ["./assets/js/web.js"],
+    "css": ["./assets/css/*.*"],
+    "fonts": ["./assets/fonts/*.*"],
+    "img": ["./assets/img/**/*"]
+  },
+  "appTemplate": [
+    {
+      "pageName": "home",
+      "js": [
+        "./assets/js/pages/home.js"
+      ]
+    },
+    {
+      "pageName": "Procedures",
+      "js": [
+        "./assets/js/pages/procedures.js"
+      ]
+    },
+    {
+      "pageName": "with-video",
+      "js": [
+        "./assets/js/pages/with-video.js"
+      ]
+    }
+  ],
+  "dist": {
+    "js": "./dist/js/",
+    "css": "./dist/css/",
+    "fonts": "./dist/fonts/",
+    "img": "./dist/img/"
+  },
+  "ignore": ["app/data/**/*.html"]
+}

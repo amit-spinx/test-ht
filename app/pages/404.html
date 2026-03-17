@@ -1,0 +1,35 @@
+{% extends "layout.html" %} 
+
+{% block style %}
+    <link rel="stylesheet" href="css/cms-page.css"  media="all"/>
+{% endblock %}
+
+{% block content %} 
+
+{{nav.active('home')}}
+
+<main role="main">
+    <section class="cmn-inner-hero d-flex align-items-center not-found-hero">
+        <img style="background-image: url(img/practice-banner.png)" alt="Practice Banner" src="img/0.gif"
+            class="div-img" height="785" width="1440">
+        <div class="container position-relative z-3 text-white">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-7 col-xl-6 order-1 order-lg-0 mt-5 mt-lg-0">
+                    <h1>PAGE NOT FOUND</h1>
+                    <h5 class="text-white mb-4 mb-lg-5">Sorry, we couldn’t find this page. Go back, or head back to our homepage to choose a new direction.</h5>
+                    <a class="btn btn-link dark" href="javascript:;"><span></span>Home</a>
+                </div>
+                <div class="col-lg-4 col-xl-3">
+                    <div class="round-close d-flex align-item-center justify-content-center">
+                        <img src="img/close-white.svg" class="img-fluid" alt="close icon" height="60" width="60" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock %} 
+
+{% block script %}
+{% endblock %}

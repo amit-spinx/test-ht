@@ -1,0 +1,92 @@
+$primary-color: #001318; 
+$secondary-color: #02222B;
+$color-white: #ffffff;
+$gray-color-1:#364245;
+$gray-color-2:#4C5A5D;
+$gray-color-3:#788B91;
+$gray-color-4: #8A9CA1;
+$gray-color-5:#9EAFB5;
+$gray-color-6:#BDCDD2;
+$gray-color-7:#CFDDE1;
+$gray-color-8:#D9E4E8;
+$gray-color-9:#E5EDEF;
+$gray-color-10:#F2F6F6;
+$green-color-1:#DAED00;
+$green-color-2:#A4CE00;
+$blue-color:#0065F2;
+
+// Bootstrap color variable
+$body-bg: #ffffff;
+$body-color: $secondary-color;
+$gray-base: #000 !default;
+$gray-darker: lighten($gray-base, 13.5%) !default; // #222
+$gray-dark: lighten($gray-base, 20%) !default;   // #333
+$gray: lighten($gray-base, 33.5%) !default; // #555
+$gray-light: lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
+$theme-colors: (
+  "primary": $primary-color,
+  "secondary": $secondary-color
+);
+
+// Link color 
+//$link-color:  $primary-color !default;
+$link-hover-color:  $blue-color !default;
+$link-hover-decoration: none !default;
+
+// Container 
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1180px,
+  xxl: 1356px
+) !default;
+
+// Grid gutter width
+$grid-gutter-width: 48px;
+
+// Buttons 
+$input-btn-font-size: 14px !default;
+$btn-font-weight: 500 !default;
+$input-btn-padding-x: 26px !default;
+$input-btn-padding-y: 16px !default;
+
+$btn-border-width: 2px !default;
+$btn-border-radius: 0px !default;
+
+$input-btn-padding-y-sm: 18px !default;
+$input-btn-padding-x-sm: 20px !default;
+
+$btn-box-shadow: none !default;
+
+// Forms Input 
+$input-bg: $primary-color !default;
+$input-bg-disabled: $gray-color-2 !default;
+$input-color: $color-white !default;
+$input-border-width: 0px;
+$input-border-color: #D7E5F6 !default;
+$input-border-radius: 0px !default;
+$input-font-size: 24px !default;
+$input-font-weight: 400 !default;
+$input-focus-border-color: $primary-color !default;
+$input-focus-color: $color-white !default;
+$input-placeholder-color: rgba(255, 255, 255, 0.5) !default;
+$input-height: 80px !default;
+$input-focus-box-shadow: 0 !default;
+
+// Checks and radios
+$form-check-margin-bottom:20px;
+$form-check-input-width: 0.89em;
+$form-check-min-height:0.89em;
+$form-check-input-bg:transparent;
+$form-check-input-border:1px solid $gray-color-3;
+$form-check-input-border-radius:0;
+$form-check-input-focus-border:1; 
+$form-check-input-checked-bg-color:$green-color-1;       
+$form-check-input-checked-bg-image:url("../img/checkbox-check.svg");
+$form-check-input-focus-border:0;
+$form-check-input-focus-box-shadow:0;
+$form-check-label-cursor:pointer;
+$form-check-label-color:$color-white;
+$form-check-input-disabled-opacity:.6; 

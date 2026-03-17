@@ -1,0 +1,50 @@
+// Import Fonts:
+//@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900');
+@import "sections/fonts";
+
+//@import "node_modules/bootstrap/scss/bootstrap";
+@import "variables";
+
+// Bootstrap Default components
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/reboot";
+
+// Bootstrap only USED Components 
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/tables";
+@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/navbar";
+@import "../../node_modules/bootstrap/scss/modal";
+@import "../../node_modules/bootstrap/scss/pagination";
+
+// General SASS file for overall project use
+// @import "../../node_modules/slick-carousel/slick/slick";
+
+// Helpers
+@import "../../node_modules/bootstrap/scss/helpers";
+
+// Utilities
+@import "../../node_modules/bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
+// Project's custom variables or mixin:
+@import "functions";
+@import "mixins";
+@import "custom";
+
+// Project core
+@import "layout";
+// @import "sections/header";
+// @import "sections/footer";

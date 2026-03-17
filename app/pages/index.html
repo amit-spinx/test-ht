@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block style %}
+  <link rel="stylesheet" href="css/home.css" media="all"/>
+{% endblock %}
+
+{% block content %}
+<!-- Header: commented from loading -->
+{# {{nav.active('home')}} #}
+
+<main role="main">
+  <section class="procedure-hero d-flex flex-column">
+    <!-- <img src="img/0.gif" style="background-image: url('img/banner-bg.jpg');" alt="" height="800" width="1440" class="divImg" /> -->
+     <div class="img-preload d-none">
+      <img src="img/proceduresdrag/0001.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0002.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0003.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0004.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0005.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0006.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0007.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0008.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0009.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0010.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0011.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0012.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0013.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0014.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0015.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0016.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0017.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0018.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0019.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0020.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0021.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0022.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0023.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0024.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0025.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0026.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0027.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0028.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0029.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0030.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0031.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0032.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0033.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0034.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0035.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+      <img src="img/proceduresdrag/0036.jpg" alt="preload image" height="800" width="1440" class="d-none" />
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 position-relative rotate-view">
+            <button onclick="goToNextSide()" class="btn btn-outline-primary" id="btnRotateBody"><svg class="bi" aria-hidden="true"><use xlink:href="#rotate"></use></svg> Rotate</button>
+
+            <button onclick="goToPreviousSide()" class="btn1 btn-outline-primary d-none" id="btnRotateBodyww"><svg class="bi" aria-hidden="true"><use xlink:href="#rotate"></use></svg> Prev</button>
+
+            <div class="viewer w-100 back-view">
+              <img src="img/procedures/back-8.jpg" alt="360 view" class="img-fluid pr-modal-img" id="productImage" width="630" height="530" />
+
+              <ul class="front-dots d-none">
+                <li>Abdomen</li>
+                <li>Arms & Shoulder</li>
+                <li>Chest</li>
+                <li>Chin</li>
+              </ul>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="hero-box h-100 position-relative">
+            <h1>Procedures</h1>
+            <p>Click directly on the body to highlight a treatment area, or choose from the list below to begin customizing your procedure.</p>
+            <ul>
+              <li>
+                <a href="#">Arms & Shoulder</a>
+                <div class="modal">sd</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock %}
+
+{% block script %}
+  <script defer src="js/home.min.js"></script>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block style %}
+<link rel="stylesheet" href="css/sitemap.css"  media="all"/>
+{% endblock %}
+
+{% block content %}
+
+{# {{nav.active('home')}} #}
+
+<main role="main">
+  <section class="cms-head">
+    <img src="img/0.gif" style="background-image: url('img/practice-banner.png')" alt="" height="785" width="1440"
+      class="div-img" />
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>Sitemap</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sitemap">
+    <div class="container">
+      <ul>
+        {% for sm in sitemap %}
+          <li>
+            <a target="_blank" href="{{ sm.url }}">{{sm.name}}</a>
+            {%if sm.subNav %}
+              <ul class="text-16 subnav">
+                {% for sub in sm.subNav %}
+                  <li><a target="_blank" href="{{ sub.url }}">{{sub.name}}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+</main>
+
+{% endblock %}

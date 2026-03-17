@@ -1,0 +1,158 @@
+{% extends "layout.html" %}
+{% block style %}
+<link rel="stylesheet" href="css/home.css" media="all"/>
+{% endblock %}
+
+{% block content %}
+
+<!-- {{nav.active('style')}} -->
+
+<main role="main">
+    <section>
+        <div class="container">
+            <h1 class="display-font">H0 - Large Display</h1>
+            <h1>H1 - Large Display</h1>
+            <h2>H2 - Large Display</h2>
+            <h3>H3 - Small Headline</h3>
+            <h4>H4 - Lead Copy</h4>
+            <h5>H5 - Subheading</h5>
+            <br />
+            <h6>H6 - Caption</h6>
+            <br />
+            <p class="text-18">Text 18</p>
+            <p class="text-16">Text 16</p>
+            <p class="text-14">Text 14</p>
+            <p>
+                <a href="#" class="link-18">Text 18</a>
+                <a href="#" class="link-16 mx-5">Text 16</a>
+                <a href="#" class="link-14">Text 14</a>
+            </p>
+            <p>Quae fuerit causa, nollem me ab eo delectu rerum, quem modo dixi,
+                constituto, ut labore et impetus quo
+                ignorare vos arbitrer, sed animo etiam erga nos causae
+                confidere, sed animo etiam ac ratione voluptatem
+                et accurate disserendum et fortibus.
+
+                In quo quaerimus, non recusandae itaque negat opus esse
+                expetendam et aut perferendis doloribus
+                asperiores repellat hanc ego assentior, cum soluta nobis est et
+                accusamus et voluptatem sequi nesciunt,
+                neque disputatione, quam interrogare aut dolores suscipiantur
+                maiorum dolorum effugiendorum.
+
+                Torquatos nostros? quos dolores et argumentandum et dolore
+                disputandum putant sed ut alterum aspernandum
+                sentiamus alii autem, quibus ego assentior, cum a natura ipsa
+                iudicari etenim quoniam detractis de quo
+                voluptas assumenda est, necesse est, omnis iste natus error.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Perspiciatis laboriosam deserunt quas,
+                voluptates blanditiis nam veniam aut. Vero, autem laboriosam?
+                Error molestiae, ipsam laboriosam rerum
+                reiciendis placeat inventore soluta laudantium.</p>
+            <div class="row my-5">
+                <div class="col-md-6">
+                    <ul>
+                        <li>#Parent Item </li>
+                        <li>#Parent Item </li>
+                        <li>#Parent Item </li>
+                        <li>#Parent Item </li>
+                        <li>#Parent Item </li>
+                        <li>#Parent Item </li>
+                        <li>#Parent Item </li>
+                        <li>#Parent Item </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                        <li>#Parent Item </li>
+                        <li>#Parent Item
+                            <ul>
+                                <li>#Sub Item </li>
+                                <li>#Sub Item </li>
+                                <li>#Sub Item </li>
+                            </ul>
+                        </li>
+                        <li>#Parent Item
+                            <ol>
+                                <li>#Sub Item </li>
+                                <li>#Sub Item </li>
+                                <li>#Sub Item </li>
+                            </ol>
+                        </li>
+                        <li>#Parent Item </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <ol>
+                        <li>#Parent Item </li>
+                        <li>#Parent Item
+                            <ol>
+                                <li>#Sub Item </li>
+                                <li>#Sub Item </li>
+                                <li>#Sub Item </li>
+                            </ol>
+                        </li>
+                        <li>#Parent Item
+                            <ul>
+                                <li>#Sub Item </li>
+                                <li>#Sub Item </li>
+                                <li>#Sub Item </li>
+                            </ul>
+                        </li>
+                        <li>#Parent Item </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h2>Buttons</h2>
+            <div class="py-4">
+              
+                    <a class="btn btn-link" href="#"><span></span>Explore Our Attorneys</a>
+            </div>
+
+            <div class="px-4 p-3 mb-4" style="background-color: #001318;">
+                <a class="btn btn-link dark" href="#"><span></span>Explore Our Attorneys</a>
+            </div>
+            <div class="mb-5">
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control"
+                            placeholder="Enter email" id="email1">
+                    </div>
+                <div class="mb-5 p-3" style="background-color: #02222B;">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Default checkbox
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value
+                            id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Checked checkbox
+                        </label>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card p-4">
+                        <h3>New Poll: Low Income, People of Color Hit Hardest by
+                            COVID-19</h3>
+                        <span class="text-14">We believe good leadership and
+                            people power can lead to social justice and
+                            better health for all of California.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    {% endblock %}

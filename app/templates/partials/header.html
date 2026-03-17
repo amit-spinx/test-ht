@@ -1,0 +1,106 @@
+{% macro active(activePage='home') %}
+<header class="fixed-top">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid g-0">
+            <a href="javascript:;" class="navbar-brand">
+                <img class="img-fluid" src="img/logo.svg" alt="{{ project.title }} Logo" width="77" height="51">
+            </a>
+            <div class="right-bar d-flex align-items-center">
+                <ul class="list-unstyled top-link list-unstyled m-0 d-none d-md-flex align-items-center">
+                    <li><a href="javascript:;">Attorneys</a></li>
+                </ul>
+                <a class="search" data-bs-toggle="modal" data-bs-target="#topSearch" href="javascript:;" title="search">
+                    <img src="img/icon-search.svg" alt="Search Icon" width="20" height="20">Search
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#divNavbar"
+                    aria-controls="divNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="img/icon-menu.svg" class="img-fluid" alt="Menu icon" width="22" height="17">Menu
+                </button>
+                <div class="collapse navbar-collapse" id="divNavbar">
+                    <a class="close-menu"><img src="img/icon-close.svg" class="img-fluid" alt="Menu icon" width="16"
+                            height="16">Close</a>
+                    <div class="navbar-inner w-100">
+                        <ul class="list-unstyled navbar-nav ml-auto flex-wrap">
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:;">Attorneys</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:;">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:;">News</a>
+                            </li>
+                            <li class="nav-item subnav-inner">
+                                <a class="nav-link" href="javascript:;"><img src="img/link-static-arrow.svg"
+                                        class="img-fluid" alt="Menu icon" width="10" height="14">The Firm</a>
+                                <div class="subnav w-100">
+                                    <div class="subnav-inside w-100">
+                                        <span class="back-link">
+                                            <svg width="10" height="16" viewBox="0 0 10 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 15L2 8L9 1" stroke="#DAED00" stroke-width="2" />
+                                            </svg>Back
+                                        </span>
+                                        <ul>
+                                            <li><a href="javascript:;">About Quinn Emanuel</a></li>
+                                            <li><a href="javascript:;">Our Notable Victories</a></li>
+                                            <li><a href="javascript:;">Videos</a></li>
+                                            <li><a href="javascript:;">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item subnav-inner">
+                                <a class="nav-link" href="javascript:;"><img src="img/link-static-arrow.svg"
+                                        class="img-fluid" alt="Menu icon" width="10" height="14">Careers</a>
+                                        <div class="subnav w-100">
+                                            <div class="subnav-inside w-100">
+                                                <span class="back-link">
+                                                    <svg width="10" height="16" viewBox="0 0 10 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M9 15L2 8L9 1" stroke="#DAED00" stroke-width="2" />
+                                                    </svg>Back
+                                                </span>
+                                                <ul>
+                                                    <li><a href="javascript:;">Our Culture</a>
+                                                        <ul>
+                                                            <li><a href="javascript:;">Why Work Here</a></li>
+                                                            <li><a href="javascript:;">What Distinguishes Our Firm</a></li>
+                                                            <li><a href="javascript:;">Work From Anywhere</a></li>
+                                                            <li><a href="javascript:;">Charitable Giving</a></li>
+                                                            <li><a href="javascript:;">Artists-In-Residence Program</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="javascript:;">Summer Program</a></li>
+                                                    <li><a href="javascript:;">Application & Recruiting</a></li>
+                                                    <li><a href="javascript:;">US Compensation & Benefits</a></li>
+                                                    <li><a href="javascript:;">International Career Opportunities</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:;">Locations</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="custom-overlay"></div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="modal top-search-popup fade" id="topSearch" tabindex="-1" role="dialog" aria-labelledby="topSearch"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form class="text-14 position-relative container" role="search">
+                <input name="s" type="text" placeholder="Search...">
+                <a href="javascript:;" class="close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endmacro %}

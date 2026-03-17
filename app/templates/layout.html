@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no" />
+  <title>Curved</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/icon" />
+  
+  <!-- Include CSS files-->
+  {% block style %} {% endblock %}
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol class="vcard" id="vcard" width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <g id="Icon 20px">
+        <rect id="Rectangle" x="1" y="1" width="18" height="18" stroke="currentcolor" stroke-width="1.5"/>
+        <circle id="Oval" cx="10" cy="9" r="2" stroke="currentcolor" stroke-width="1.5"/>
+        <path id="Oval_2" d="M13 14C13 12.3431 11.6569 11 10 11C8.34315 11 7 12.3431 7 14" stroke="currentcolor" stroke-width="1.5"/>
+        </g>
+    </symbol>
+    <symbol class="rotate" id="rotate" width="23" height="14" viewBox="0 0 23 14" fill="none">
+        <path xmlns="http://www.w3.org/2000/svg" d="M11.2021 0.000140217C5.63678 0.000140217 0 1.92551 0 5.60121C0 8.33475 3.11504 10.0961 7.00134 10.8249V14.0029L11.2021 9.80205L7.00134 5.60125V7.96011C4.33345 7.35158 2.80054 6.30138 2.80054 5.60125C2.80054 4.61395 5.98944 2.80071 11.2021 2.80071C16.4149 2.80071 19.6038 4.61395 19.6038 5.60125C19.6038 6.39573 17.5307 7.72626 14.0027 8.21306V11.0341C18.5112 10.5022 22.4043 8.65747 22.4043 5.60107C22.4043 1.92537 16.7675 0.000140217 11.2021 0.000140217Z" fill="currentcolor"/>
+    </symbol>
+    <symbol class="right-chev" id="rightChev" width="6" height="10" viewBox="0 0 6 10" fill="none">
+      <path xmlns="http://www.w3.org/2000/svg" d="M1 9L5 5L1 1" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+	</svg>
+
+  <div class="page-wrapper">
+    {% import 'partials/header.html' as nav %}
+    {% block content %} {% endblock %}
+    <!-- Footer section starts from here -->
+    {# {% include "partials/footer.html" %} #}
+  </div>
+
+  <!-- Include Core files -->
+  <script defer src="js/app.js"></script>
+  {% block script %} {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+// Font Family
+$font-body: 'Graphik', sans-serif;
+
+// Fluid Fonts
+$min_width: 350px;
+$max_width: 1200px;
+$min_font: 18px;
+$max_font: 18px;
+@mixin body-font {
+  font-family: $font-body;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  line-height: 30px;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+@mixin display-font {
+  font-family: $font-body;
+  font-weight: 600;
+  line-height: 1.089;
+  letter-spacing: -1.406px;
+  @include fluid-type($min_width, $max_width, 60px, 90px);
+}
+// h1
+@mixin font-xl {
+  font-family: $font-body;
+  font-weight: 600;
+  line-height: 1.14;
+  margin-bottom: 40px;
+  @include fluid-type($min_width, $max_width, 40px, 60px);
+}
+// h2
+@mixin font-lg { 
+  font-family: $font-body;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  letter-spacing: -0.75px;
+  color: $secondary-color;
+  @include fluid-type($min_width, $max_width, 38px, 48px);
+}
+// h3
+@mixin font-md {
+  font-family: $font-body;
+  font-weight: 500;
+  line-height: 1.32;
+  margin-bottom: 34px;
+  letter-spacing: -0.594px;
+  @include fluid-type($min_width, $max_width, 30px, 38px);
+}
+// h4
+@mixin font-sm {
+  font-family: $font-body;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  letter-spacing: -0.45px;
+  color: $primary-color;  
+  @include fluid-type($min_width, $max_width, 24px, 30px);
+}
+// h5
+@mixin font-xs {
+  font-family: $font-body;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  letter-spacing: -0.375px;
+  color: $primary-color; 
+  @include fluid-type($min_width, $max_width, 20px, 24px);
+}
+
+//h6
+@mixin font-xxs {
+  font-family: $font-body;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  letter-spacing: -0.525px;
+  color: $primary-color;  
+  @include fluid-type($min_width, $max_width, 18px, 20px);
+}
+
+@mixin text-22 {
+  font-family: $font-body;
+  font-weight: 400;
+  line-height: 34px;
+  @include fluid-type($min_width, $max_width, 20px, 22px);
+}
+
+@mixin text-18 {
+  font-family: $font-body;
+  font-weight: 400;
+  line-height: 30px;
+  @include fluid-type($min_width, $max_width, 16px, 18px);
+}
+
+@mixin text-16 {
+  font-family: $font-body;
+  font-weight: 400;
+  line-height: 26px;
+  @include fluid-type($min_width, $max_width, 14px, 16px);
+}
+
+@mixin text-14 {
+  font-family: $font-body;
+  font-weight: 400;
+  line-height: 24px;
+  @include fluid-type($min_width, $max_width, 14px, 14px);
+}
+
+// Other Mixing
+@mixin border-radius($radius) { -webkit-border-radius: $radius; -moz-border-radius: $radius; -o-border-radius: $radius;	border-radius: $radius; }
+
+@mixin opacity($opacity) { -webkit-opacity:$opacity; -moz-opacity:$opacity; -o-opacity:$opacity; -m-opacity:$opacity; opacity:$opacity; }
+
+@mixin transition($seconds) { -webkit-transition: all $seconds ease; -moz-transition: all $seconds ease; -ms-transition: all $seconds ease; -o-transition: all $seconds ease; transition: all $seconds ease; }
+
+@mixin trans-anim-none { -webkit-transition:none; -moz-transition:none; -o-transition:none; transition:none; }
+
+@mixin space-none { margin:0; padding:0; }
+
+@mixin app-none { -webkit-appearance: none; -moz-appearance: none; -o-appearance: none; -ms-appearance: none; appearance: none;}
+
+@mixin point-none { -webkit-pointer-events:none; -moz-pointer-events:none; -o-pointer-events:none; -ms-pointer-events:none; pointer-events:none; }
+
+// Background properties
+@mixin bg-cmn { background-position:top center; background-repeat:no-repeat; background-size: cover; }
+@mixin bg-parallax { background-attachment:fixed; @include bg-cmn; }
+
+
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.5)
+  }
+
+  &:-moz-placeholder {
+      color: rgba(255, 255, 255, 0.5);
+  }
+
+  &::-moz-placeholder {
+      color:rgba(255, 255, 255, 0.5);
+  }
+
+  &:-ms-input-placeholder {
+      color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+@mixin transform-origin($val) {
+  -webkit-transform-origin: $val;
+  -moz-transform-origin: $val;
+  -ms-transform-origin: $val;
+  transform-origin: $val;
+}
+@mixin transform ($origin) {
+  -moz-transform: $origin;
+  -o-transform: $origin;
+  -ms-transform: $origin;
+  -webkit-transform: $origin;
+  transform: $origin;
+}
+@mixin transform-none {
+  -moz-transform: none;
+  -o-transform: none;
+  -ms-transform: none;
+  -webkit-transform: none;
+  transform: none;
+}
+@mixin keyframes($animation-name) {
+@-webkit-keyframes #{$animation-name} {
+  @content;
+}
+@-moz-keyframes #{$animation-name} {
+  @content;
+}  
+@-ms-keyframes #{$animation-name} {
+  @content;
+}
+@-o-keyframes #{$animation-name} {
+  @content;
+}  
+@keyframes #{$animation-name} {
+  @content;
+}
+}
