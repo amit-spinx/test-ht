@@ -1,1 +1,129 @@
-// Header Styles here
+// Header / Nav Styles
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 12px 60px;
+
+  @include media-breakpoint-down(xl) {
+    padding: 12px 32px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 12px 20px;
+  }
+
+  &__container {
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+
+  &__inner {
+    background: $color-white;
+    border: 1px solid $orange-950;
+    border-radius: 20px;
+    padding: 0 20px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(lg) {
+      height: auto;
+      padding: 16px 20px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    display: block;
+    background: none;
+
+    img {
+      height: 38px;
+      width: auto;
+      display: block;
+    }
+
+    &:hover {
+      background: none;
+    }
+  }
+
+  &__toggle {
+    border: none;
+    background: none;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-shadow: none;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  &__toggle-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: $orange-900;
+    border-radius: 2px;
+    @include transition(0.3s);
+  }
+
+  &__collapse {
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+      padding: 16px 0 8px;
+    }
+  }
+
+  &__nav-list {
+    gap: 4px;
+    flex-wrap: nowrap;
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 4px;
+    }
+  }
+
+  &__nav-item {
+    margin: 0;
+    padding: 0;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  &__nav-link {
+    @include text-16;
+    color: $orange-900;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: transparent;
+    display: block;
+    margin-bottom: 0;
+    @include transition(0.2s);
+
+    &:hover {
+      color: $orange-700;
+      background: rgba($orange-300, 0.25);
+    }
+  }
+
+  // Hero overlap — header is transparent over dark hero
+  &.is-scrolled {
+    .site-header__inner {
+      box-shadow: 0 2px 16px rgba($orange-950, 0.1);
+    }
+  }
+}

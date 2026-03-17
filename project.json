@@ -22,18 +22,6 @@
       "js": [
         "./assets/js/pages/home.js"
       ]
-    },
-    {
-      "pageName": "Procedures",
-      "js": [
-        "./assets/js/pages/procedures.js"
-      ]
-    },
-    {
-      "pageName": "with-video",
-      "js": [
-        "./assets/js/pages/with-video.js"
-      ]
     }
   ],
   "dist": {

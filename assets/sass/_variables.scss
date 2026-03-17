@@ -15,15 +15,28 @@ $green-color-1:#DAED00;
 $green-color-2:#A4CE00;
 $blue-color:#0065F2;
 
+// Health Trust brand palette
+$cream-color:   #f8f4e8;
+$orange-50:     #fffaec;
+$orange-100:    #fff3d3;
+$orange-200:    #ffe3a6;
+$orange-300:    #ffce6d;
+$orange-500:    #ff930d;
+$orange-700:    #d35b04;
+$orange-900:    #762804;
+$orange-950:    #3a0b03;
+$blue-600:      #0a5eba;
+$blue-900:      #123767;
+
 // Bootstrap color variable
 $body-bg: #ffffff;
 $body-color: $secondary-color;
 $gray-base: #000 !default;
-$gray-darker: lighten($gray-base, 13.5%) !default; // #222
-$gray-dark: lighten($gray-base, 20%) !default;   // #333
-$gray: lighten($gray-base, 33.5%) !default; // #555
-$gray-light: lighten($gray-base, 46.7%) !default; // #777
-$gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
+$gray-darker: #222 !default;
+$gray-dark: #333 !default;
+$gray: #555 !default;
+$gray-light: #777 !default;
+$gray-lighter: #eee !default;
 $theme-colors: (
   "primary": $primary-color,
   "secondary": $secondary-color

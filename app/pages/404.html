@@ -1,12 +1,13 @@
-{% extends "layout.html" %} 
+{% extends "layout.html" %}
+{% from "partials/header.html" import nav %}
 
 {% block style %}
-    <link rel="stylesheet" href="css/cms-page.css"  media="all"/>
+  <link rel="stylesheet" href="css/cms-page.css" media="all"/>
 {% endblock %}
 
-{% block content %} 
+{% block content %}
 
-{{nav.active('home')}}
+{{ nav() }}
 
 <main role="main">
     <section class="cmn-inner-hero d-flex align-items-center not-found-hero">

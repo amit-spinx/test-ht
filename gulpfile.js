@@ -12,6 +12,7 @@ const browserSync = require('browser-sync').create();
 const sourcemaps = require('gulp-sourcemaps');
 const gulpIf = require('gulp-if');
 const nunjucksRender = require('gulp-nunjucks-render');
+const htmlmin = require('gulp-html-minifier-terser');
 const yargs = require('yargs');
 const merge = require("merge-stream");
 
@@ -47,7 +48,10 @@ function minifySass() {
   let stream = src("./assets/sass/pages/*.scss").pipe($.plumber());
   stream = stream
   .pipe(sourcemaps.init({ loadMaps: true }))
-  .pipe(sass.sync().on("error", sass.logError))
+  .pipe(sass.sync({
+    quietDeps: true,
+    silenceDeprecations: ['legacy-js-api', 'import', 'global-builtin', 'color-functions', 'if-function']
+  }).on("error", sass.logError))
   .pipe(cached("sass"))
   .pipe(cleanCSS())
   .pipe(sourcemaps.write("."))
@@ -110,8 +114,8 @@ function nunjucksTask() {
     .pipe(plumber({ errorHandler: onError }))
     .pipe(nunjucksRender(nunjucksOptions))
     .pipe($.jsbeautifier({ indent_size: 2, indent_char: ' ' }))
-    .pipe($.removeEmptyLines())
-    .pipe(gulpIf(isProduction, $.htmlmin({ collapseWhitespace: true })))
+    .pipe($.replace(/^\s*[\r\n]/gm, ''))
+    .pipe(gulpIf(isProduction, htmlmin({ collapseWhitespace: true })))
     .pipe(dest('dist'));
 }
 

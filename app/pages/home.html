@@ -1,43 +1,328 @@
 {% extends "layout.html" %}
+{% from "partials/header.html" import nav %}
 
 {% block style %}
-<link rel="stylesheet" href="css/sitemap.css"  media="all"/>
+<link rel="stylesheet" href="css/home.css" media="all">
 {% endblock %}
 
 {% block content %}
-
-{# {{nav.active('home')}} #}
+{{ nav() }}
 
 <main role="main">
-  <section class="cms-head">
-    <img src="img/0.gif" style="background-image: url('img/practice-banner.png')" alt="" height="785" width="1440"
-      class="div-img" />
+
+  <!-- =============================================
+       HERO SECTION
+       ============================================= -->
+  <section class="home-hero" aria-label="Hero">
+    <div class="home-hero__bg" aria-hidden="true">
+      <img src="img/0.gif"
+        data-src="https://www.figma.com/api/mcp/asset/21702f3c-5e11-4611-8285-886db0dc5f76"
+        alt="" class="home-hero__bg-img">
+    </div>
+    <div class="home-hero__decor home-hero__decor--top" aria-hidden="true">
+      <img src="img/0.gif"
+        data-src="https://www.figma.com/api/mcp/asset/bbec0a81-cf74-4f0a-88ab-5480e938d6a8"
+        alt="" class="img-fluid">
+    </div>
+    <div class="home-hero__decor home-hero__decor--bottom" aria-hidden="true">
+      <img src="img/0.gif"
+        data-src="https://www.figma.com/api/mcp/asset/1aa1f483-ec35-4174-9711-dfc4c823b5a0"
+        alt="" class="img-fluid">
+    </div>
     <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h1>Sitemap</h1>
+      <div class="home-hero__content">
+        <h1 class="home-hero__title">
+          Everyone's Health <span class="home-hero__title--accent">Matters</span>
+        </h1>
+        <p class="home-hero__tagline">
+          Advancing health equity across Silicon Valley through strategic funding, advocacy, and partnership.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       ABOUT / METRICS SECTION
+       ============================================= -->
+  <section class="home-about">
+    <div class="container">
+      <div class="home-about__content row align-items-center">
+
+        <!-- Image column -->
+        <div class="col-12 col-lg-5">
+          <div class="home-about__image-wrap" aria-hidden="true">
+            <div class="home-about__image-inner">
+              <img src="img/0.gif"
+                data-src="https://www.figma.com/api/mcp/asset/21702f3c-5e11-4611-8285-886db0dc5f76"
+                alt="Community members in conversation" class="home-about__image img-fluid">
+            </div>
+            <div class="home-about__decor home-about__decor--swirl">
+              <img src="img/0.gif"
+                data-src="https://www.figma.com/api/mcp/asset/4ef47bbf-7905-46c6-8b39-3baa8971169b"
+                alt="" class="img-fluid">
+            </div>
+            <div class="home-about__decor home-about__decor--stripes">
+              <img src="img/0.gif"
+                data-src="https://www.figma.com/api/mcp/asset/34ee42cd-cdbf-4d16-9794-9c8c8db0a22e"
+                alt="" class="img-fluid">
+            </div>
+          </div>
+        </div>
+
+        <!-- Text column -->
+        <div class="col-12 col-lg-6 offset-lg-1">
+          <div class="home-about__text">
+            <h2 class="home-about__heading">Building Health Equity, Together.</h2>
+            <p class="home-about__body">
+              For nearly 30 years, The Health Trust has invested in communities across Silicon Valley to reduce disparities and expand opportunity. We work with partners to strengthen systems and move policy so health is possible for everyone.
+            </p>
+            <div class="home-about__cta d-flex align-items-center flex-wrap gap-4">
+              <a href="javascript:;" class="btn home-about__btn-primary">About Our Grantmaking</a>
+              <a href="javascript:;" class="home-about__link-underline">About Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats row -->
+      <div class="home-about__stats">
+        <div class="row g-0">
+          <div class="col-12 col-md-6">
+            <div class="home-about__stat-item home-about__stat-item--border">
+              <p class="home-about__stat-number">
+                <span class="home-about__stat-value">$2M</span><span class="home-about__stat-plus">+</span>
+              </p>
+              <p class="home-about__stat-desc">
+                invested annually via grants to directly benefit residents of Santa Clara and Northern San Benito counties.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="home-about__stat-item">
+              <p class="home-about__stat-number">
+                <span class="home-about__stat-value">$200</span><span class="home-about__stat-plus">+</span>
+              </p>
+              <p class="home-about__stat-desc">
+                returned in community benefit through grantmaking and program services.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="sitemap">
+
+  <!-- =============================================
+       FOCUS AREAS / SLIDER SECTION
+       ============================================= -->
+  <section class="home-focus">
     <div class="container">
-      <ul>
-        {% for sm in sitemap %}
-          <li>
-            <a target="_blank" href="{{ sm.url }}">{{sm.name}}</a>
-            {%if sm.subNav %}
-              <ul class="text-16 subnav">
-                {% for sub in sm.subNav %}
-                  <li><a target="_blank" href="{{ sub.url }}">{{sub.name}}</a></li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
+      <div class="home-focus__header row align-items-start">
+        <div class="col-12 col-lg-8">
+          <p class="home-focus__intro">
+            We prioritize strategies that reduce disparities and strengthen the conditions that shape health at both the individual and community level.
+          </p>
+        </div>
+        <div class="col-12 col-lg-4 d-flex justify-content-lg-end align-items-center">
+          <a href="javascript:;" class="btn home-focus__btn-areas">Our Focus Areas</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-focus__slider-wrap">
+      <div class="home-focus__slider" data-action="focus-slider">
+
+        <div class="home-focus__slide">
+          <div class="home-focus__card home-focus__card--photo home-focus__card--neg4">
+            <img src="img/0.gif"
+              data-src="https://www.figma.com/api/mcp/asset/91ef2ba3-3866-4313-a3b2-53db2fd96351"
+              alt="Community health program participants">
+          </div>
+        </div>
+
+        <div class="home-focus__slide">
+          <div class="home-focus__card home-focus__card--orange home-focus__card--pos2">
+            <h3 class="home-focus__card-title">Food &amp; Nutrition</h3>
+            <p class="home-focus__card-body">Strengthening food access and nutrition supports for people most impacted.</p>
+          </div>
+        </div>
+
+        <div class="home-focus__slide">
+          <div class="home-focus__card home-focus__card--photo home-focus__card--pos4">
+            <img src="img/0.gif"
+              data-src="https://www.figma.com/api/mcp/asset/3676089e-8611-4111-b523-ab68fe9ebcbb"
+              alt="Chronic disease management resources">
+          </div>
+        </div>
+
+        <div class="home-focus__slide">
+          <div class="home-focus__card home-focus__card--white home-focus__card--neg2">
+            <h3 class="home-focus__card-title">Chronic Disease</h3>
+            <p class="home-focus__card-body">Making prevention, screening, and management more accessible and effective.</p>
+          </div>
+        </div>
+
+        <div class="home-focus__slide">
+          <div class="home-focus__card home-focus__card--photo home-focus__card--neg4">
+            <img src="img/0.gif"
+              data-src="https://www.figma.com/api/mcp/asset/90a83311-8844-423d-a2b1-622e3c9999cb"
+              alt="Supportive housing community">
+          </div>
+        </div>
+
+        <div class="home-focus__slide">
+          <div class="home-focus__card home-focus__card--orange home-focus__card--pos2">
+            <h3 class="home-focus__card-title">Supportive Housing</h3>
+            <p class="home-focus__card-body">Connecting stable housing with the health supports people need to stay housed.</p>
+          </div>
+        </div>
+
+        <div class="home-focus__slide">
+          <div class="home-focus__card home-focus__card--photo home-focus__card--pos4">
+            <img src="img/0.gif"
+              data-src="https://www.figma.com/api/mcp/asset/a8e711a5-79c2-4140-9e5e-243066c4c8ad"
+              alt="Health equity advocates">
+          </div>
+        </div>
+
+        <div class="home-focus__slide">
+          <div class="home-focus__card home-focus__card--white home-focus__card--neg2">
+            <h3 class="home-focus__card-title">Advancing Health Equity</h3>
+            <p class="home-focus__card-body">Supporting timely, community-led work that addresses health disparities and removes barriers to care and well-being.</p>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
+
+  <!-- =============================================
+       NEWS SECTION
+       ============================================= -->
+  <section class="home-news">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <!-- Image column -->
+        <div class="col-12 col-lg-5">
+          <div class="home-news__image-wrap">
+            <div class="home-news__image-shadow" aria-hidden="true"></div>
+            <div class="home-news__image-rotate">
+              <img src="img/0.gif"
+                data-src="https://www.figma.com/api/mcp/asset/7a50f5af-c274-4efe-a367-48d7908363e4"
+                alt="Health Trust staff member" class="home-news__image img-fluid">
+            </div>
+            <div class="home-news__decor home-news__decor--top" aria-hidden="true">
+              <img src="img/0.gif"
+                data-src="https://www.figma.com/api/mcp/asset/f21af234-3f6a-42e6-8aa0-4e2a6af01b06"
+                alt="" class="img-fluid">
+            </div>
+            <div class="home-news__decor home-news__decor--bottom" aria-hidden="true">
+              <img src="img/0.gif"
+                data-src="https://www.figma.com/api/mcp/asset/98d68d32-58f8-4574-ba80-953c2b2b74dd"
+                alt="" class="img-fluid">
+            </div>
+          </div>
+        </div>
+
+        <!-- News list column -->
+        <div class="col-12 col-lg-6 offset-lg-1">
+          <div class="home-news__text">
+            <h2 class="home-news__heading">The Latest</h2>
+            <ul class="home-news__list list-unstyled">
+
+              <li class="home-news__item">
+                <a href="javascript:;" class="home-news__link">
+                  <div class="home-news__item-content">
+                    <span class="home-news__item-date">December 12, 2025</span>
+                    <span class="home-news__item-title">Upholding Human Dignity Must Be a Priority for Everyone of Us</span>
+                  </div>
+                  <svg class="home-news__item-arrow" aria-hidden="true" focusable="false"><use xlink:href="#rightChev"></use></svg>
+                </a>
+              </li>
+
+              <li class="home-news__item">
+                <a href="javascript:;" class="home-news__link">
+                  <div class="home-news__item-content">
+                    <span class="home-news__item-date">December 12, 2025</span>
+                    <span class="home-news__item-title">The Health Trust Invests In Area Non-Profits Working to Improve Health Outcomes</span>
+                  </div>
+                  <svg class="home-news__item-arrow" aria-hidden="true" focusable="false"><use xlink:href="#rightChev"></use></svg>
+                </a>
+              </li>
+
+              <li class="home-news__item">
+                <a href="javascript:;" class="home-news__link">
+                  <div class="home-news__item-content">
+                    <span class="home-news__item-date">October 14, 2025</span>
+                    <span class="home-news__item-title">The Health Trust Awards $2.15 Million in FY26 Cycle 1 Grants to Advance Health Equity</span>
+                  </div>
+                  <svg class="home-news__item-arrow" aria-hidden="true" focusable="false"><use xlink:href="#rightChev"></use></svg>
+                </a>
+              </li>
+
+            </ul>
+            <a href="javascript:;" class="btn home-news__btn">More Newsroom</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       CTA SECTION
+       ============================================= -->
+  <section class="home-cta">
+    <div class="container">
+      <div class="row g-4">
+
+        <div class="col-12 col-md-6">
+          <a href="javascript:;" class="home-cta__card" data-action="cta-card" aria-label="About Our Grantmaking">
+            <div class="home-cta__card-image">
+              <img src="img/0.gif"
+                data-src="https://www.figma.com/api/mcp/asset/9beea568-41f4-4fe7-b009-46015eefe999"
+                alt="" class="home-cta__img">
+            </div>
+            <div class="home-cta__card-overlay"></div>
+            <div class="home-cta__card-header">
+              <h3 class="home-cta__card-title">About Our Grantmaking</h3>
+            </div>
+            <div class="home-cta__card-bottom">
+              <p class="home-cta__card-desc">The Health Trust invests more than $2 million annually in nonprofit and public agencies to directly benefit residents of Santa Clara and Northern San Benito counties.</p>
+              <svg class="home-cta__card-arrow" aria-hidden="true" focusable="false"><use xlink:href="#rightChev"></use></svg>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <a href="javascript:;" class="home-cta__card" data-action="cta-card" aria-label="Our Mission and Values">
+            <div class="home-cta__card-image">
+              <img src="img/0.gif"
+                data-src="https://www.figma.com/api/mcp/asset/e07442c6-837c-42da-aadb-9c6e0a9f6dbb"
+                alt="" class="home-cta__img">
+            </div>
+            <div class="home-cta__card-overlay"></div>
+            <div class="home-cta__card-header">
+              <h3 class="home-cta__card-title">Our Mission &amp; Values</h3>
+            </div>
+            <div class="home-cta__card-bottom">
+              <p class="home-cta__card-desc">Advancing health equity across Silicon Valley through strategic funding, advocacy, and partnership.</p>
+              <svg class="home-cta__card-arrow" aria-hidden="true" focusable="false"><use xlink:href="#rightChev"></use></svg>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
 </main>
 
+{% include "partials/footer.html" %}
+
+{% endblock %}
+
+{% block script %}
+<script src="js/home.min.js"></script>
 {% endblock %}
